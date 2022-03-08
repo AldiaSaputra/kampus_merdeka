@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUGAS 7</title>
+    <link rel="stylesheet" href="tugas7.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1 align="center">Sebaran Gempa Di CINA</h1>
+      <table border="1" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Lokasi Gempa</th>
+            <th>Skala Gempa</th>
+            <th>Dampak Gempa</th>
+          </tr>
+        </thead>
+        <script>
+          class gempa {
+            constructor(lokasi, skala) {
+              this.temp = lokasi;
+              this.skala = skala;
+            }
+            dampak(dialami) {
+              if (this.skala >= 0 && this.skala <= 2) {
+                dialami = "dampak yang dialami tidak terasa";
+              } else if (this.skala > 2 && this.skala <= 4) {
+                dialami = "dampak yang dialami bangunan retak-retak";
+              } else if (this.skala > 4 && this.skala <= 6) {
+                dialami = "dampak yang dialami bangunan roboh";
+              } else if (this.skala > 6) {
+                dialami = "dampak yang dialami bangunan rubuh dan berpotensi tsunami";
+              }
+              let color;
+              switch (dialami) {
+                case "dampak yang dialami bangunan rubuh dan berpotensi tsunami":
+                  color = "red";
+                  break;
+                case "dampak yang dialami bangunan roboh":
+                  color = "#ec7484";
+                  break;
+                case "dampak yang dialami bangunan retak-retak":
+                  color = "#e6bfc4";
+                  break;
+                default:
+                  break;
+              }
+              document.write(`<tr>
+                            <td>${this.temp}</td>
+                            <td align='center'>${this.skala}</td>
+                            <td bgcolor="${color}">${dialami}</td></tr>`);
+            }
+          }
+          let QingHai = new gempa("Qing Hai", 6.9);
+          let Jinchang = new gempa("Jinchang", 4.8);
+          let KabManduo = new gempa("Kabupaten Maduo", 7.4);
+          let Anhui = new gempa("Anhui", 1.9);
+          let Guangxi = new gempa("Guangxi Zhuang", 3.33);
+          let Guizhou = new gempa("Guizhou", 7.6);
+          let HeilongJiang = new gempa("Heilong Jiang", 6);
+          let NingxiaHui = new gempa("Ningxia Hui", 1);
+          let Shaanxi = new gempa("Shaanxi", 2);
+          let Tianjin = new gempa("Tianjin", 3.97);
+          QingHai.dampak();
+          Jinchang.dampak();
+          KabManduo.dampak();
+          Anhui.dampak();
+          Guangxi.dampak();
+          Guizhou.dampak();
+          HeilongJiang.dampak();
+          NingxiaHui.dampak();
+          Shaanxi.dampak();
+          Tianjin.dampak();
+        </script>
+      </table>
+    </div>
+  </body>
+</html>
