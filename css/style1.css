@@ -1,0 +1,90 @@
+body {
+  background: linear-gradient(#c48be6, #cd32a6);
+}
+.kuda,
+.tupai,
+.harimau,
+.elang {
+  background: rgb(170, 31, 135);
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+  border-top-right-radius: 25px;
+}
+hr {
+  border: 10px inset black;
+}
+.cover {
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  float: left;
+  text-shadow: #ccc;
+  width: 180px;
+  height: 220;
+}
+
+.desc {
+  font-family: comic sans ms;
+  padding: 25px;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box {
+  margin-left: 21%;
+}
+
+p#judul {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.clear {
+  clear: left;
+}
+div.tentang,
+.visi,
+.deskripsi {
+  width: 1000px;
+  display: none;
+}
+
+div.tentang,
+.visi,
+.deskripsi {
+  margin: 0px;
+  padding: 15px;
+  text-align: center;
+  width: 1000px;
+  background: white;
+  border: 10px inset black;
+  border-bottom: 10px inset #df83eb;
+  border-radius: 25px;
+}
+
+.buka_tentang,
+.buka_visi,
+.buka_desc {
+  margin: 0px;
+  padding: 15px;
+  text-align: center;
+  width: 1000px;
+  background: #c48be6;
+  border: 10px inset #df83eb;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+center {
+  margin-top: 100px;
+}
+
+ul {
+  text-align: left;
+}
